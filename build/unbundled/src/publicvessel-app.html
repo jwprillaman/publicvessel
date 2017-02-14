@@ -1,0 +1,23 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/paper-menu/paper-menu.html">
+
+
+
+</head><body><dom-module id="publicvessel-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      --paper-menu-background-color: purple;
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    <paper-menu selected="0">
+      <paper-item>vessels</paper-item>
+      <paper-item>profile</paper-item>
+    </paper-menu>
+  </template>
+
+  <script>Polymer({is:"publicvessel-app",properties:{prop1:{type:String,value:"publicvessel-app"}}});</script>
+</dom-module>
+</body></html>

@@ -1,0 +1,41 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/paper-menu/paper-menu.html">
+
+<!--
+`publicvessel-element`
+public vessel app
+
+@demo demo/index.html
+-->
+
+<dom-module id="publicvessel-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+        --paper-menu-background-color: purple;
+        --paper-menu-color: white;
+      }
+
+    </style>
+    <paper-menu selected="0">
+      <paper-item>vessels</paper-item>
+      <paper-item>profile</paper-item>
+    </paper-menu>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'publicvessel-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'publicvessel-app',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
