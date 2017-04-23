@@ -1,0 +1,31 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+
+<dom-module id="vessel-node">
+  <template>
+    <style>
+        div {
+          display:inline-block;
+          width:calc(100% - 106px);
+        }
+    </style>
+      <div>Am I in a working state?</div>
+      <paper-icon-button icon="arrow-drop-up" on-tap="_tap"></paper-icon-button>
+      <paper-icon-button icon="arrow-drop-down" on-tap="_tap"></paper-icon-button>
+  </template>
+  <script>
+      Polymer({
+
+        is: 'vessel-node',
+
+        properties: {
+          prop1: {
+            type: String,
+            value: 'vessel',
+          }
+        }
+      });
+    </script>
+
+</dom-module>

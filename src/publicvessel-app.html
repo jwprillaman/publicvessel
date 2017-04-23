@@ -7,6 +7,7 @@
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
 <link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="./vessel-node.html">
 
 <!--
 `publicvessel-element`
@@ -35,6 +36,9 @@ public vessel app
       app-drawer ::content > div{
         padding: 0px !important;
       }
+      vessel-node {
+        padding:8px;
+      }
 
 
 
@@ -47,13 +51,14 @@ public vessel app
             <div main-title>Public Vessel</div>
           </app-toolbar>
         </app-header>
-
         <app-drawer-layout force-narrow>
           <app-drawer id="drawer">
             <div>hello</div>
           </app-drawer>
+          <vessel-node></vessel-node>
         </app-drawer-layout>
       </app-header-layout>
+
   </template>
 
   <script>
