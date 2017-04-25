@@ -10,9 +10,12 @@
           width:calc(100% - 106px);
         }
     </style>
-      <div>Am I in a working state?</div>
-      <paper-icon-button icon="arrow-drop-up" on-tap="_tap"></paper-icon-button>
-      <paper-icon-button icon="arrow-drop-down" on-tap="_tap"></paper-icon-button>
+    <div>
+      <a href="{{url}}">{{url}}</a>
+    </div>
+
+    <paper-icon-button icon="arrow-drop-up" on-tap="_tap"></paper-icon-button>
+    <paper-icon-button icon="arrow-drop-down" on-tap="_tap"></paper-icon-button>
   </template>
   <script>
       Polymer({
@@ -20,10 +23,7 @@
         is: 'vessel-node',
 
         properties: {
-          prop1: {
-            type: String,
-            value: 'vessel',
-          }
+          url : String
         }
       });
     </script>

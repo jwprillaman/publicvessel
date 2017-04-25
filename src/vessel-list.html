@@ -1,0 +1,28 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="./vessel-node.html">
+
+<dom-module id="vessel-list">
+  <template>
+    <template is="dom-repeat" items="{{vesselCollection}}">
+      <vessel-node url="{{item.url}}"></vessel-node>
+    </template>
+  </template>
+  <script>
+      Polymer({
+
+        is: 'vessel-list',
+
+        ready: function() {
+          this.vesselCollection = [
+            {url: "https://www.reddit.com"},
+            {url: "https://www.bbc.com"},
+            {url: "https://www.cnn.com"},
+            {url: "https://www.foxnews.com"}
+          ]
+        }
+      });
+    </script>
+
+</dom-module>
