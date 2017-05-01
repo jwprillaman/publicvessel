@@ -14,8 +14,8 @@
       <a href="{{url}}">{{url}}</a>
     </div>
 
-    <paper-icon-button icon="arrow-drop-up" on-tap="_tap"></paper-icon-button>
-    <paper-icon-button icon="arrow-drop-down" on-tap="_tap"></paper-icon-button>
+    <paper-icon-button icon="arrow-drop-up" on-tap="up"></paper-icon-button>
+    <paper-icon-button icon="arrow-drop-down" on-tap="down"></paper-icon-button>
   </template>
   <script>
       Polymer({
@@ -23,7 +23,15 @@
         is: 'vessel-node',
 
         properties: {
-          url : String
+          url : String,
+          index: Number
+        },
+        up: function(e){
+          console.log(this.context.move)
+          this.context.move("up", this.index);
+        },
+        down: function(e){
+          this.context.move("down", this.index);
         }
       });
     </script>

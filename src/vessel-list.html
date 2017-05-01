@@ -6,7 +6,7 @@
 <dom-module id="vessel-list">
   <template>
     <template is="dom-repeat" items="{{vesselCollection}}">
-      <vessel-node url="{{item.url}}"></vessel-node>
+      <vessel-node url="{{item.url}}" context="{{context}}" index={{index}}></vessel-node>
     </template>
   </template>
   <script>
@@ -20,8 +20,35 @@
             {url: "https://www.bbc.com"},
             {url: "https://www.cnn.com"},
             {url: "https://www.foxnews.com"}
-          ]
+          ];
+
+          this.move = function(direction, index){
+            var newIndex = index;
+            switch(direction){
+              case "up":
+                newIndex++;
+                break;
+              case "down":
+                newIndex--;
+                break;
+              default:
+                console.log(direction + " direction not supprted");
+            }
+            console.log(this)
+            console.log(this.vesselCollection)
+            console.log(index)
+            console.log(this.vesselCollection[index])
+            this.vesselCollection.splice(newIndex, 0, this.vesselCollection[index]);
+            this.vesselCollection.splice( index, 1);
+            console.log(this.vesselCollection)
+          };
+
+          this.context = {
+            move: this.move,
+            vesselCollection: this.vesselCollection
+          };
         }
+
       });
     </script>
 
